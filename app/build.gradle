@@ -1,0 +1,112 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.mybaseproject"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField("String", "BASE_URL", "\"${base_url}\"")
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        //abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def room_version = "1.1.1"
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+
+    implementation "com.google.dagger:dagger:$rootProject.dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.dagger_version"
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation "junit:junit:$rootProject.junit_version"
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    /*UI Libraries*/
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraint_layout_version"
+    implementation "com.google.android.material:material:$rootProject.marterial_version"
+
+    implementation "androidx.core:core-ktx:$rootProject.core_ktx_version"
+
+    /*Android architectures libraries*/
+    implementation "android.arch.navigation:navigation-fragment:$rootProject.arch_navigation_version"
+    implementation "android.arch.navigation:navigation-ui:$rootProject.arch_navigation_version"
+    implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.arch_navigation_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.arch_navigation_version"
+    implementation "android.arch.lifecycle:extensions:$rootProject.arch_room_version"
+
+    /*Use this to long message instead Log.d*/
+    implementation "com.jakewharton.timber:timber:$rootProject.timber_version"
+
+    /*Rx libraries to send and receive data use Observer pattern*/
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rx_java_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rx_android_version"
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rootProject.rx_binding_version"
+    implementation "com.jakewharton.rxrelay2:rxrelay:$rootProject.rx_relay_version"
+
+    /*Retrofit and OkHttp  to call API to server*/
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp_version"
+    implementation "com.google.code.gson:gson:$rootProject.gson_version"
+    implementation ('com.squareup.retrofit2:converter-simplexml:2.0.0-beta3'){
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+
+    /*EventBus to send and receive data use Observer pattern*/
+    implementation "org.greenrobot:eventbus:$rootProject.event_bus_version"
+
+    /*Glide to load image*/
+    implementation "com.github.bumptech.glide:glide:$rootProject.glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glide_version"
+}

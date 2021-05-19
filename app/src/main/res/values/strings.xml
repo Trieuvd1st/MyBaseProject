@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyBaseProject</string>
+
+    <string name="messenge_no_search_result">Không có kết quả phù hợp</string>
+</resources>

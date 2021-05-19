@@ -1,0 +1,115 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlin_version = '1.3.50'
+
+        // App version
+        /**
+         * Rule naming for versionName
+         * for test server, versionName have format: x.0.xx
+         * for release server, versionName have format: x.1.xx
+         */
+        versionName = '1.2.0'
+        versionCode = 71
+
+        // SDK and Tools
+        compile_sdk_version = 28
+        min_sdk_version = 21
+        target_sdk_version = 28
+
+        // App dependencies
+        junit_version = '4.12'
+        multidex_version = '1.0.3'
+
+        test_runner_version = '1.0.2'
+        espresso_version = '3.0.2'
+
+        appcompat_version = '1.1.0'
+        constraint_layout_version = '2.0.0-beta3'
+        marterial_version = '1.0.0'
+
+        arch_navigation_version = '1.0.0'
+        arch_room_version = '1.0.0'
+        work_manager_version = '1.0.1'
+        core_ktx_version = '1.1.0'
+
+        timber_version = '4.7.1'
+
+        dagger_version = '2.21'
+
+        rx_java_version = '2.2.7'
+        rx_android_version = '2.1.1'
+        rx_binding_version = '2.0.0'
+        rx_relay_version = '2.1.0'
+
+        retrofit_version = '2.3.0'
+        okhttp_version = '3.8.1'
+        gson_version = '2.8.1'
+
+        gms_location_version = '16.0.0'
+
+        event_bus_version = '3.0.0'
+
+        fresco_version = '1.11.0'
+
+        easy_permission_version = '1.2.0'
+
+        coroutines_version = '1.1.0'
+
+        facebook_sdk_version = '5.0.0'
+        facebook_core_version = '5.0.0'
+        facebook_login_version = '5.0.0'
+        facebook_account_kit_version = '5.0.0'
+
+        viewpager_indicator_version = '2.4.1'
+
+        play_service_version = '16.1.0'
+        google_auth_version = '16.0.1'
+        google_map_version = '16.1.0'
+        google_location_version = '16.0.0'
+
+        firebase_core_version = '17.2.0'
+        firebase_mesaging_version = '20.0.0'
+        firebase_dynamic_link_version = '17.0.0'
+        firebase_auth_version = '19.2.0'
+        firebase_jobdispatcher_version = '0.8.5'
+
+        crashlytics_version = '2.10.1'
+
+        discrete_scrollview_version = '1.4.9'
+
+        material_calendar_version = '2.0.1'
+
+        three_ten_version = '1.2.0'
+
+        image_cropper_version = '2.8.+'
+        photo_view_version = '2.3.0'
+
+        glide_version = '4.9.0'
+        glide_transform_version = '4.0.0'
+    }
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral() // Warning: this repository is going to shut down soon
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
