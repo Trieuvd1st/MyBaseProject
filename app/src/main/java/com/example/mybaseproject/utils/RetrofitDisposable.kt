@@ -1,6 +1,6 @@
 package com.example.mybaseproject.utils
 
-import com.example.mybaseproject.data.pojo.response.HttpError
+import com.example.mybaseproject.domain.pojo.response.HttpError
 import com.google.gson.Gson
 import retrofit2.HttpException
 import retrofit2.Response

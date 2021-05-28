@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "292145117478",
+    "project_id": "fir-fcm-b236c",
+    "storage_bucket": "fir-fcm-b236c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292145117478:android:abeb6b2b2cc3b69fa2a9e7",
+        "android_client_info": {
+          "package_name": "com.example.firebaseFCM"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292145117478-0ar9qe31dnn1qkqf0n77jas3ednrk29i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBomPS45Bb0EYv6HskUSJ-zvzGYJMPY8vY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292145117478-0ar9qe31dnn1qkqf0n77jas3ednrk29i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

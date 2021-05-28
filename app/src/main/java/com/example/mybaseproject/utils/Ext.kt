@@ -1,6 +1,6 @@
 package com.example.mybaseproject.utils
 
-import com.example.mybaseproject.data.pojo.response.HttpError
+import com.example.mybaseproject.domain.pojo.response.HttpError
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
