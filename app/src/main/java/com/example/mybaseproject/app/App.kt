@@ -18,9 +18,5 @@ class App : Application() {
         if (BuildConfig.DEBUG) {
             Timber.plant(DebugTree())
         }
-
-        FirebaseMessaging.getInstance().isAutoInitEnabled = true
-
-
     }
 }

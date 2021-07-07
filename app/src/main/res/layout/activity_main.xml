@@ -6,45 +6,12 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edtTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="title"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:id="@+id/edtMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="message"
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:id="@+id/btnPushNotification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="push notification"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnOpenSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open second activity!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnDoCrash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do Crash"
+        android:layout_marginTop="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
