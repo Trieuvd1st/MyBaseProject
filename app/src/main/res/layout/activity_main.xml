@@ -6,6 +6,14 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
+    <com.example.mybaseproject.utils.custom.DialView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        app:fanColor1="#FFEB3B"
+        app:fanColor2="#CDDC39"
+        app:fanColor3="#009688"/>
+
     <Button
         android:id="@+id/btnOpenSecond"
         android:layout_width="wrap_content"

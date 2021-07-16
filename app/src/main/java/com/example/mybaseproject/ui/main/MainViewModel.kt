@@ -1,4 +1,7 @@
 package com.example.mybaseproject.ui.main
 
-class MainViewModel {
+import com.example.mybaseproject.base.BaseViewModel
+
+class MainViewModel: BaseViewModel() {
+
 }

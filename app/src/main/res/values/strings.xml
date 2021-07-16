@@ -1,3 +1,14 @@
 <resources>
     <string name="messenge_no_search_result">Không có kết quả phù hợp</string>
+
+    <string name="fan_off">off</string>
+    <string name="fan_low">1</string>
+    <string name="fan_medium">2</string>
+    <string name="fan_high">3</string>
+
+    <string name="change">Change</string>
+    <string name="reset">Reset</string>
+
+    <string name="canvasContentDescription">Mini Paint is a simple line drawing app.
+   Drag your fingers to draw. Rotate the phone to clear.</string>
 </resources>
